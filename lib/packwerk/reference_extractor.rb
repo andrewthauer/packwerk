@@ -4,7 +4,7 @@
 require "sorbet-runtime"
 
 require "packwerk/constant_discovery"
-require "packwerk/constant_name_inspector"
+require "packwerk/constant_name_inspector_interface"
 require "packwerk/node"
 require "packwerk/parsed_constant_definitions"
 require "packwerk/reference"
@@ -17,7 +17,7 @@ module Packwerk
     sig do
       params(
         context_provider: Packwerk::ConstantDiscovery,
-        constant_name_inspectors: T::Array[Packwerk::ConstantNameInspector],
+        constant_name_inspectors: T::Array[Packwerk::ConstantNameInspectorInterface],
         root_node: ::AST::Node,
         root_path: String,
       ).void

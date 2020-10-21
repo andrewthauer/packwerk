@@ -6,7 +6,7 @@ require "sorbet-runtime"
 
 module Packwerk
   # An interface describing some object that can extract a constant name from an AST node
-  module ConstantNameInspector
+  module ConstantNameInspectorInterface
     extend T::Sig
     extend T::Helpers
 

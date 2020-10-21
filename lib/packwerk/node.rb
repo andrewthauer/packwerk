@@ -103,6 +103,10 @@ module Packwerk
         Location.new(location.line, location.column)
       end
 
+      def constant?(node)
+        Node.type(node) == Node::CONSTANT
+      end
+
       def method_arguments(method_call_node)
         raise TypeError unless type(method_call_node) == METHOD_CALL
 

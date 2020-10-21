@@ -198,7 +198,7 @@ module Packwerk
     private
 
     class DummyAssociationInspector
-      include Packwerk::ConstantNameInspector
+      include Packwerk::ConstantNameInspectorInterface
 
       def initialize(association: false, reference_name: "Dummy", expected_args: nil)
         @association = association

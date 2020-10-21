@@ -1,13 +1,13 @@
 # typed: true
 # frozen_string_literal: true
 
-require "packwerk/constant_name_inspector"
+require "packwerk/constant_name_inspector_interface"
 require "packwerk/node"
 
 module Packwerk
   # Extracts the implicit constant reference from an active record association
   class AssociationInspector
-    include ConstantNameInspector
+    include ConstantNameInspectorInterface
 
     RAILS_ASSOCIATIONS = %i(
       belongs_to
